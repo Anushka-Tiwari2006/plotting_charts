@@ -48,3 +48,12 @@ plt.title("Elbow Method")
 plt.xlabel("No.of clusters")
 plt.ylabel("wcss")
 plt.show() 
+
+star_mass = []
+star_radius = []
+planet_types = []
+for star_data in data:
+  star_radius.append(star_data[3])
+  star_mass.append(star_data[2])
+fig = px.scatter(x = star_radius,y = star_mass)
+fig.show()
